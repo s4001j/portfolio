@@ -12,17 +12,17 @@ export default function SkillPage(){
         },
         {
             id: 2,
-            title: "Spring Boot",
+            title: "Spring Boot (v.4.32.0)",
             text: "객체 지향 프로그래밍의 개념을 이해하고, Spring Boot 프레임워크를 사용하여 프론트와 DB의 간단한 CRUD 데이터 통신을(백엔드) 수행할 수 있습니다.",
         },
         {
             id: 3,
-            title: "MySQL Workbench",
+            title: "MySQL Workbench (v.8.0.44)",
             text: "SQL 쿼리 생성/삽입, 수정/갱신, 삭제, 조회 등의 CRUD 작업을 수행할 수 있습니다.",
         },
         {
             id: 4,
-            title: "Visual Studio Code",
+            title: "Visual Studio Code (v.1.105.1)",
             text: "VS Code 환경에서 소스코드를 작성해왔습니다.",
         },
         {

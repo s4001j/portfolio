@@ -15,7 +15,7 @@ const ProjDetail = ({ detailPop, onClose, children }) => {
 };
 
 
-export default function Projects({year, title, text, tag, link, src}){
+export default function Projects({year, title, text, role, tag, link, src}){
     const tagItems = tag.split(",").map(item=>item.trim());
     const [detailPop, setDetailPop] = useState(false);
     const closePop = () => setDetailPop(false);
@@ -42,8 +42,8 @@ export default function Projects({year, title, text, tag, link, src}){
             </div>
 
             <ProjDetail detailPop={detailPop} onClose={closePop}>
-                <div className="text-xl font-bold">프로젝트 제목</div>
-                <div className="pl-3 mb-3 text-sm text-gray-200">{title}</div>
+                <div className="text-xl font-bold">프로젝트 제목 (기능)</div>
+                <div className="pl-3 mb-3 text-sm text-gray-200">{title} ({text})</div>
                 <div className="text-xl font-bold">프로젝트 기간</div>
                 <div className="pl-3 mb-3 text-sm text-gray-200">{year}</div>
                 <div className="text-xl font-bold">기술 스택</div>
@@ -52,8 +52,8 @@ export default function Projects({year, title, text, tag, link, src}){
                     <span key={i}><SkillTag skill={txt}/></span>
                 ))}
                 </div>
-                <div className="text-xl font-bold">담당 및 성과</div>
-                <div className="pl-3 mb-3 text-sm text-gray-200">{text}</div>
+                <div className="text-xl font-bold">담당</div>
+                <div className="pl-3 mb-3 text-sm text-gray-200">{role}</div>
                 <div className="text-xl font-bold">결과물</div>
                 <a
                 href={link}
