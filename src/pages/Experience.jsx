@@ -3,18 +3,108 @@ import SkillTag from "../components/SkillTag";
 import Projects from "../components/Projects";
 
 export default function Experience(){
-    const certificates = ['ISTQB CTFL (2018)', '컴퓨터활용능력 2급 (2022)', 'MOS master 2010 (2013)', '무선설비산업기사 (2014)', 'ITQ 한글 A (2006)', '자동차운전면허 2종 보통 (2017)'];
+    const certificates = [
+        {
+            id: 1,
+            title: "ISTQB CTFL (2018)",
+            text: "소프트웨어 테스팅의 프로세스(테스트 계획, 분석, 설계, 구현, 실행, 테스트 완료 조건과 리포팅)에 대한 이해를 알고 있습니다. 단계별 테스팅(컴포넌트/통합/히스템/인수 테스팅)과 유형별 유형별 테스팅(기능/비기능/구조적/확인/리그레션/유지보수), 설계 기법(기본/명세기반/구조기반/경험기반), 리스크, 관리도구에 대해 알고 있습니다.",
+        },
+        {
+            id: 2,
+            title: "컴퓨터활용능력 2급 (2022)",
+            text: "MS Excel 및 워드 프로세서의 편집/도구/표/차트 등 다양한 활용과 사용 능력을 갖추고 있습니다.",
+        },
+        {
+            id: 3,
+            title: "MOS master 2010 (2013)",
+            text: "MS word, MS Excel, MS Powerpoint, Access의 편집/도구/표/차트 등 다양한 활용과 사용 능력을 갖추고 있습니다.",
+        },
+        {
+            id: 4,
+            title: "ITQ 한글 A (2006)",
+            text: "한컴오피스의 편집/도구/표/차트 등 다양한 활용과 사용 능력을 갖추고 있습니다.",
+        },
+        {
+            id: 5,
+            title: "무선설비산업기사 (2014)",
+            text: "회로의 구성과 동작을 알고 고장 수리를 위한 계측기 장비를 다룰 수 있습니다. (과목: 디지털전자회로, 무선통신기기, 안테나개론, 전자계산기일반 및 무선설비기준)",
+        },
+        {
+            id: 6,
+            title: "자동차운전면허 2종 보통 (2017)",
+            text: "자동변속기의 자동차를 운전할 수 있습니다.",
+        },
+    ];
+
+    const career = [
+        {
+            id:1,
+            job:"리액트를 활용한 웹개발자 양성 과정 (3개월)",
+            text:"HTML/CSS, JAVA의 기초 지식, Java Script, ES5, ES6의 차이점과 사용법, MySQL 쿼리 생성/삽입, 수정/갱신, 삭제, 조회 등의 사용법, Spring Boot 프레임워크를 사용하여 Rest API, JPA, Legacy API CRUD 동작을 배웠습니다.",
+        },
+        {
+            id:2,
+            job:"SW QA/QE (총 경력 )",
+            text:"",
+        },
+        {
+            id:3,
+            job:"HW DQA (총 경력 )",
+            text:"",
+        },
+    ]
 
     return(
-        <div className="p-1 min-h-screen" id="Experience">
-            <div className="text-4xl mb-5">경력 및 자격증</div>
-            <div className="text-2xl">[경력]</div>
+        <div className="p-5 min-h-screen" id="Experience">
+            <div className="text-4xl mb-5">경력 및 자격증</div><br/>
+            <div className="text-2xl">[경력 및 교육]</div>
+            <div className="overflow-x-auto">
+            <table className="min-w-full table-auto border-collapse">
+                {/* 테이블 헤더 */}
+                <thead className="">
+                <tr>
+                    <th className="px-4 py-2 border-b text-left">No.</th>
+                    <th className="px-4 py-2 border-b text-left">항목</th>
+                    <th className="px-4 py-2 border-b text-left">설명</th>
+                </tr>
+                </thead>
+
+                {/* 테이블 본문 */}
+                <tbody>
+                {career.map((row) => (
+                    <tr key={row.id} className="hover:bg-zinc-300">
+                    <td className="px-4 py-2 border-b">{row.id}</td>
+                    <td className="px-4 py-2 border-b">{row.job}</td>
+                    <td className="px-4 py-2 border-b">{row.text}</td>
+                    </tr>
+                ))}
+                </tbody>
+            </table>
+            </div><br/>
             <div className="text-2xl mt-10">[자격증]</div>
-            <ul className="font-normal">
-            {certificates.map((item, index) => (
-                <li key={index}>ㆍ{item}</li>
-            ))}
-            </ul>
+            <div className="overflow-x-auto">
+            <table className="min-w-full table-auto border-collapse">
+                {/* 테이블 헤더 */}
+                <thead className="">
+                <tr>
+                    <th className="px-4 py-2 border-b text-left">No.</th>
+                    <th className="px-4 py-2 border-b text-left">항목</th>
+                    <th className="px-4 py-2 border-b text-left">설명</th>
+                </tr>
+                </thead>
+
+                {/* 테이블 본문 */}
+                <tbody>
+                {certificates.map((row) => (
+                    <tr key={row.id} className="hover:bg-zinc-300">
+                    <td className="px-4 py-2 border-b">{row.id}</td>
+                    <td className="px-4 py-2 border-b">{row.title}</td>
+                    <td className="px-4 py-2 border-b">{row.text}</td>
+                    </tr>
+                ))}
+                </tbody>
+            </table>
+            </div>
         </div>
     );
 }

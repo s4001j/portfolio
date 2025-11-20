@@ -40,7 +40,7 @@ function ToTheTop() {
       className={`
         cursor-pointer border-gray-200 border-2 rounded-full h-[30px] w-[30px] 
         flex flex-col items-center justify-center
-        bg-[#0063ba] hover:cursor-pointer text-black 
+        bg-indigo-600 hover:cursor-pointer text-gray-200 
         transition-colors duration-200,
         ${visible
           ? "opacity-100 translate-y-0"
@@ -64,34 +64,48 @@ function ToTheTop() {
     </button>
   );
 }
-const goTo =() => {
-    navi("/skillPage");
-  }
+
+const Menu=()=>{
+  const navi = useNavigate();
+  return(
+    <>
+    <button onClick={()=>navi("/")} className="hover:cursor-pointer hover:text-indigo-500">소개</button>
+    <br/>
+    <button onClick={()=>navi("/projectPage")} className="hover:cursor-pointer hover:text-indigo-500">프로젝트</button>
+    <br/>
+    <button onClick={()=>navi("/experience")} className="hover:cursor-pointer hover:text-indigo-500">경력 및 자격증</button>
+    <br/>
+    <button onClick={()=>navi("/skillPage")} className="hover:cursor-pointer hover:text-indigo-500">기술 스택</button>
+    </>
+  );
+}
 
 function GlobalHeader() {
-  const navi = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="fixed col-span-1 bg-[#0d1e44ff] w-full min-w-[100] sm:max-w-[250px] sm:min-h-screen mx-auto sm:ml-auto p-3 sm:text-right">
+    <header className="fixed col-span-1 bg-[#0d1e44ff] w-full min-w-[100] sm:max-w-[250px] sm:min-h-screen mx-auto sm:ml-auto p-3 sm:text-right top-0 sm:mt-4 z-[1000]">
       <Link to="/" className="text-center text-[#F0F2F5] text-2xl mb-5"> Sujeong's Portfolio </Link>
       <div className="mt-7 hidden sm:block border-m text-right b pt-1">
           이수정 <br/>
           프론트엔드 개발자<br/>
-      </div>
-      <div className="text-left sm:text-right">
           s4001j@gmail.com
       </div>
       <div className="hidden sm:block border-t-1 border-emerald-700 mt-5 pt-1">
-        {/* <div onClick={() => setScrollTarget("projects") } className="hover:cursor-pointer">
-          프로젝트
-        </div> */} <br/>
-        <button onClick={()=>navi("/projectPage")} className="hover:cursor-pointer">
-          프로젝트 </button>
         <br/>
-        <button onClick={()=>navi("/experience")} className="hover:cursor-pointer">
-          경력 및 자격증
+        <Menu/>
+      </div>
+      <div className={"sm:hidden relative inline-block right-0 ml-3 pr-3"}>
+        <button
+        onClick={()=>setIsOpen(!isOpen)}
+        className="flex ml-auto p-2 rounded-md ring-2 ring-indigo-500 hover:ring-orange-400"
+        >
+        <div className="space-y-1">
+          <div className="w-6 h-0.5 bg-indigo-500"></div>
+          <div className="w-6 h-0.5 bg-indigo-500"></div>
+          <div className="w-6 h-0.5 bg-indigo-500"></div>
+        </div>
         </button>
-        <br/>
-        <button onClick={()=>navi("/skillPage")} className="hover:cursor-pointer">기술 스택</button>
+        <div className={`absolute text-left p-1 mt-1 w-30 ${isOpen?"border-b-1 border-indigo-500 bg-[#0d1e44ff]":"border-none"}`}>{isOpen && (<Menu/>)}</div>
       </div>
     </header>
   );
@@ -125,7 +139,7 @@ export default function GlobalLayout() {
       </div>
       <GlobalFooter />
 
-      <div className="fixed bottom-4 right-4 z-50 max-w-5xl">
+      <div className="fixed bottom-8 right-4 z-[1000] max-w-5xl">
         <ToTheTop />
       </div>
     </div>

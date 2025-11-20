@@ -21,7 +21,7 @@ export default function Projects({year, title, text, tag, link, src}){
     const closePop = () => setDetailPop(false);
 
     return (
-        <div onClick={()=>setDetailPop(true)} className="border rounded-lg p-3 gap-3 w-[400px] hover:border-blue-600">
+        <div onClick={()=>setDetailPop(true)} className="border rounded-lg p-3 gap-3 w-[420px] hover:border-blue-600">
             <div className="relative group">
                 <span className="absolute left-2/3 transform  translate-y-1/2 bottom-full mb-2 hidden group-hover:block px-2 py-1 bg-orange-600 text-gray-200 text-sm rounded whitespace-nowrap">
                 클릭하여 상세 내용 보기
