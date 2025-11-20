@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Euljiro10YearsLater";
+  src: url("/public/fonts/Euljiro10YearsLater.ttf") format("truetype");
+}
