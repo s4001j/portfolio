@@ -1,1 +1,0 @@
-import{j as e}from"./index-DJ_rM0-m.js";function t(){return e.jsx(e.Fragment,{children:e.jsx("div",{className:"mx-auto w-full max-w-[1200px] px-4",children:e.jsx("div",{className:"flex justify-center p-10",children:"존재하지 않는 페이지 입니다."})})})}export{t as default};
