@@ -2,7 +2,7 @@ import { useState } from "react";
 import React from "react";
 import { Suspense, lazy } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"; 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import GlobalLayout from "./layouts/GlobalLayout";
 // import Home from "./pages/Home";
 // import NotFound from "./pages/NotFound";
@@ -13,7 +13,7 @@ const ProjectPage = lazy(()=> import("@/pages/ProjectPage"));
 const Experience = lazy(()=> import("@/pages/Experience"));
 const SkillPage = lazy(()=> import("@/pages/SkillPage"));
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <GlobalLayout />,
