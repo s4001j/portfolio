@@ -83,7 +83,7 @@ const Menu=()=>{
 function GlobalHeader() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="fixed col-span-1 sm:col-span-2 inline-block bg-[#0d1e44ff] w-full min-w-0 sm:max-w-[250px] sm:min-h-screen sm:ml-auto p-3 sm:text-right top-0 sm:mt-4 z-[1000]">
+    <header className="fixed inline-block bg-[#0d1e44ff] w-full min-w-0 sm:max-w-[250px] sm:min-h-screen sm:ml-auto p-3 sm:text-right top-0 sm:mt-4 z-[1000]">
       <div className="flex">
         <div className="mx-auto">
         <Link to="/" className="text-center text-[#F0F2F5] text-2xl mb-5"> Sujeong's Portfolio </Link> <br/>
@@ -135,9 +135,11 @@ export default function GlobalLayout() {
   const [scrollTarget, setScrollTarget] = useState(null);
   return (
     <div className="flex flex-col box-border min-w-0 bg-[#0d1e44ff] text-emerald-500 pt-5 overflow-x-auto break-words">
-      <div className="grid grid-cols-1 sm:grid-cols-6 gap-5 justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-7 gap-5 justify-center">
+        <div className="col-span-1 sm:col-start-2">
         <GlobalHeader/>
-        <main className="col-span-1 sm:col-span-4 mr-auto p-1 mb-3 max-w-5xl mt-15 sm:mt-1 sm:ml-65 pl-0 sm:pl-5 sm:border-l-1 border-emerald-700">
+        </div>
+        <main className="col-span-1 sm:col-span-5 sm:col-start-2 mr-auto p-1 mb-3 max-w-5xl mt-15 sm:mt-1 sm:ml-65 pl-0 sm:pl-5 sm:border-l-1 border-emerald-700">
             <ScrollToTop />
             <Outlet />
         </main>
