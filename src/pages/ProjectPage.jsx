@@ -42,7 +42,7 @@ export default function ProjectPage(){
                 <img
                 src={tempBNB_frontNbacktree}
                 alt="empBNB_frontNbacktree"
-                className="rounded-lg shadow-md max-w-[420px] min-w-0 ml-2"
+                className="rounded-lg shadow-md min-w-0 max-w-[420px] min-w-0 ml-2"
                 />
                 <br/>
                 DB 구성 :
