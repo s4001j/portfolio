@@ -134,7 +134,7 @@ function GlobalFooter() {
 export default function GlobalLayout() {
   const [scrollTarget, setScrollTarget] = useState(null);
   return (
-    <div className="flex flex-col box-border w-full min-w-0 bg-[#0d1e44ff] text-emerald-500 pt-5 overflow-x-hidden break-words">
+    <div className="flex flex-col box-border min-w-0 bg-[#0d1e44ff] text-emerald-500 pt-5 overflow-x-auto break-words">
       <div className="grid grid-cols-1 sm:grid-cols-6 gap-5 justify-center">
         <GlobalHeader/>
         <main className="col-span-1 sm:col-span-4 mr-auto p-1 mb-3 max-w-5xl mt-15 sm:mt-1 sm:ml-65 pl-0 sm:pl-5 sm:border-l-1 border-emerald-700">
