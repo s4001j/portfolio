@@ -20,7 +20,7 @@ export default function ProjectPage(){
     const tagItems1 = ProjectList[0].tag.split(",").map(item=>item.trim());
 
     return(
-        <div className="box-border p-5">
+        <div className="box-border p-5 overflow-x-auto mx-1">
         <div className="text-4xl mb-15">
             <div className="mb-5">Project</div>
             <Projects year="2025.09.26.~2025.10.22." title="TempBNB" text="숙박 예약 플랫폼" role="위시리스트 쿼리, 홈화면, 검색창, 검색결과, 위시리스트, 레이아웃 헤더/푸터" tag="React, TailwindCSS4, Spring Boot, MySQL" link="https://github.com/s4001j/tempBNB" src="https://temp-bnb-seven.vercel.app/" />
@@ -42,14 +42,14 @@ export default function ProjectPage(){
                 <img
                 src={tempBNB_frontNbacktree}
                 alt="empBNB_frontNbacktree"
-                className="rounded-lg shadow-md"
+                className="rounded-lg shadow-md max-w-[420px] min-w-0 ml-2"
                 />
                 <br/>
                 DB 구성 :
                 <img
                 src={tempBNB_DBtree}
                 alt="tempBNB_DBtree"
-                className="rounded-lg shadow-md w-45 h-auto"
+                className="rounded-lg shadow-md w-45 h-auto ml-2"
                 />
             </div>
             <div className="text-xl font-bold">담당</div>

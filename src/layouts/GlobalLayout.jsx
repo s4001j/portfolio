@@ -83,30 +83,36 @@ const Menu=()=>{
 function GlobalHeader() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="fixed col-span-1 bg-[#0d1e44ff] w-full min-w-[100] sm:max-w-[250px] sm:min-h-screen mx-auto sm:ml-auto p-3 sm:text-right top-0 sm:mt-4 z-[1000]">
-      <Link to="/" className="text-center text-[#F0F2F5] text-2xl mb-5"> Sujeong's Portfolio </Link>
-      <button className="text-gray-400 sm:hidden text-sm">(s4001j@gmail.com)</button>
-      <div className="mt-7 hidden sm:block border-m text-right b pt-1">
+    <header className="fixed col-span-1 sm:col-span-2 inline-block bg-[#0d1e44ff] w-full min-w-0 sm:max-w-[250px] sm:min-h-screen sm:ml-auto p-3 sm:text-right top-0 sm:mt-4 z-[1000]">
+      <div className="flex">
+        <div className="mx-auto">
+        <Link to="/" className="text-center text-[#F0F2F5] text-2xl mb-5"> Sujeong's Portfolio </Link> <br/>
+        <button className="text-gray-400 flex mx-auto sm:hidden text-sm">(s4001j@gmail.com)</button>
+        </div>
+
+        {/* 작은 브라우저 사이즈 드롭다운메뉴 */}
+        <div className={"sm:hidden relative inline-block right-0 transform -translate-x-1/6 mt-3 ml-3 pr-3"}>
+          <button
+          onClick={()=>setIsOpen(!isOpen)}
+          className="flex ml-auto p-2 rounded-md ring-2 ring-indigo-500 hover:ring-orange-400"
+          >
+          <div className="space-y-1">
+            <div className="w-6 h-0.5 bg-indigo-500"></div>
+            <div className="w-6 h-0.5 bg-indigo-500"></div>
+            <div className="w-6 h-0.5 bg-indigo-500"></div>
+          </div>
+          </button>
+          <div className={`absolute text-right right-0 p-1 pr-4 mt-1 w-30 ${isOpen?"border-b-1 border-indigo-500 bg-[#0d1e44ff]":"border-none"}`}>{isOpen && (<Menu/>)}</div>
+        </div>
+      </div>
+      <div className="mt-7 hidden sm:block box-border text-right pt-1">
           이수정 <br/>
           프론트엔드 개발자<br/>
           s4001j@gmail.com
       </div>
-      <div className="hidden sm:block border-t-1 border-emerald-700 mt-5 pt-1">
+      <div className="hidden sm:block box-border border-t-1 border-emerald-700 mt-5 pt-1">
         <br/>
         <Menu/>
-      </div>
-      <div className={"sm:hidden relative inline-block right-0 ml-3 pr-3"}>
-        <button
-        onClick={()=>setIsOpen(!isOpen)}
-        className="flex ml-auto p-2 rounded-md ring-2 ring-indigo-500 hover:ring-orange-400"
-        >
-        <div className="space-y-1">
-          <div className="w-6 h-0.5 bg-indigo-500"></div>
-          <div className="w-6 h-0.5 bg-indigo-500"></div>
-          <div className="w-6 h-0.5 bg-indigo-500"></div>
-        </div>
-        </button>
-        <div className={`absolute text-left p-1 mt-1 w-30 ${isOpen?"border-b-1 border-indigo-500 bg-[#0d1e44ff]":"border-none"}`}>{isOpen && (<Menu/>)}</div>
       </div>
     </header>
   );
@@ -127,13 +133,11 @@ function GlobalFooter() {
 
 export default function GlobalLayout() {
   const [scrollTarget, setScrollTarget] = useState(null);
-  
-
   return (
-    <div className="flex flex-col w-full bg-[#0d1e44ff] text-emerald-500 pt-5 overflow-auto break-words">
-      <div className="grid grid-cols-1 sm:grid-cols-4 gap-5 mx-auto">
+    <div className="flex flex-col box-border w-full min-w-0 bg-[#0d1e44ff] text-emerald-500 pt-5 overflow-x-hidden break-words">
+      <div className="grid grid-cols-1 sm:grid-cols-6 gap-5 justify-center">
         <GlobalHeader/>
-        <main className="col-span-1 sm:col-span-3 mr-auto p-1 mb-3 max-w-5xl mt-30 sm:mt-1 sm:ml-65 pl-0 sm:pl-5 sm:border-l-1 border-emerald-700">
+        <main className="col-span-1 sm:col-span-4 mr-auto p-1 mb-3 max-w-5xl mt-15 sm:mt-1 sm:ml-65 pl-0 sm:pl-5 sm:border-l-1 border-emerald-700">
             <ScrollToTop />
             <Outlet />
         </main>
