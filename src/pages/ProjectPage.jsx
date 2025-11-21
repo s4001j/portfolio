@@ -20,12 +20,12 @@ export default function ProjectPage(){
     const tagItems1 = ProjectList[0].tag.split(",").map(item=>item.trim());
 
     return(
-        <>
-        <div className="p-5 text-4xl mb-15">
+        <div className="box-border p-5">
+        <div className="text-4xl mb-15">
             <div className="mb-5">Project</div>
             <Projects year="2025.09.26.~2025.10.22." title="TempBNB" text="숙박 예약 플랫폼" role="위시리스트 쿼리, 홈화면, 검색창, 검색결과, 위시리스트, 레이아웃 헤더/푸터" tag="React, TailwindCSS4, Spring Boot, MySQL" link="https://github.com/s4001j/tempBNB" src="https://temp-bnb-seven.vercel.app/" />
         </div>
-        <div className="border-t-1 pt-7 p-5">
+        <div className="border-t-1 pt-7">
             <div className="text-xl font-bold">프로젝트 제목 (기능)</div>
             <div className="pl-3 mb-3 text-sm text-gray-200">{ProjectList[0].title} ({ProjectList[0].text})</div>
             <div className="text-xl font-bold">프로젝트 기간</div>
@@ -54,7 +54,7 @@ export default function ProjectPage(){
             </div>
             <div className="text-xl font-bold">담당</div>
             <div className="pl-3 mb-3 text-sm text-gray-200">{ProjectList[0].role}</div>
-            <div className="text-xl font-bold">결과물</div>
+            <div className="text-xl font-bold mb-1">결과물</div>
             <a
             href={ProjectList[0].link}
             target="_blank" //새 탭으로 열기
@@ -72,6 +72,6 @@ export default function ProjectPage(){
             배포
             </a>
         </div>
-        </>
+        </div>
     );
 }

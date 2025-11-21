@@ -12,7 +12,7 @@ export default function Home(){
         <div className="p-5">
             <p className="text-gray-200 text-2xl">
             안녕하세요 이수정입니다. <br/>
-            <span className="text-emerald-500 hover:text-orange-400">포트폴리오 페이지</span>에 오신 것을 환영합니다!</p>
+            <span className="text-orange-400 hover:text-emerald-500">포트폴리오 페이지</span>에 오신 것을 환영합니다!</p>
             <br/> <br/>
             <div className="h-[350px] border-t-1">
             <div className="p-5 text-4xl h-screen">

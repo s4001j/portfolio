@@ -38,7 +38,7 @@ function ToTheTop() {
       onClick={scrollToTop}
       aria-label="맨 위로 이동"
       className={`
-        cursor-pointer border-gray-200 border-2 rounded-full h-[30px] w-[30px] 
+        cursor-pointer border-gray-200 border-2 rounded-full h-[35px] w-[35px] 
         flex flex-col items-center justify-center
         bg-indigo-600 hover:cursor-pointer text-gray-200 
         transition-colors duration-200,
@@ -85,6 +85,7 @@ function GlobalHeader() {
   return (
     <header className="fixed col-span-1 bg-[#0d1e44ff] w-full min-w-[100] sm:max-w-[250px] sm:min-h-screen mx-auto sm:ml-auto p-3 sm:text-right top-0 sm:mt-4 z-[1000]">
       <Link to="/" className="text-center text-[#F0F2F5] text-2xl mb-5"> Sujeong's Portfolio </Link>
+      <button className="text-gray-400 sm:hidden text-sm">(s4001j@gmail.com)</button>
       <div className="mt-7 hidden sm:block border-m text-right b pt-1">
           이수정 <br/>
           프론트엔드 개발자<br/>
