@@ -1,4 +1,3 @@
-import { useState } from "react";
 import SkillTag from "../components/SkillTag";
 import Projects from "../components/Projects";
 import tempBNB_DBtree from "../assets/tempBNB_DBtree.jpg";
@@ -42,7 +41,7 @@ export default function ProjectPage(){
                 <img
                 src={tempBNB_frontNbacktree}
                 alt="empBNB_frontNbacktree"
-                className="rounded-lg shadow-md min-w-0 max-w-[350px] min-w-0 ml-2"
+                className="rounded-lg shadow-md min-w-0 max-w-[320px] min-w-0 ml-2"
                 />
                 <br/>
                 DB 구성 :

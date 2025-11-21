@@ -126,13 +126,8 @@ function GlobalFooter() {
     </footer>
   );
 }
-// Black 디자인 추천 톤: #0C0C0C #1A1A1A #222222 #2C2C2C
-// White 디자인 추천 톤: #EDEDED #F5F5F5 #FAF9F6 
-// 블루그레이: #F0F2F5
-// #0b1937ff
 
 export default function GlobalLayout() {
-  const [scrollTarget, setScrollTarget] = useState(null);
   return (
     <div className="flex flex-col box-border min-w-0 bg-[#0d1e44ff] text-emerald-500 pt-5 overflow-x-auto break-words">
       <div className="grid grid-cols-1 sm:grid-cols-7 gap-5 justify-center">

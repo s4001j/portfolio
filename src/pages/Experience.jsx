@@ -1,6 +1,3 @@
-import { useState } from "react";
-import SkillTag from "../components/SkillTag";
-import Projects from "../components/Projects";
 
 export default function Experience(){
     const certificates = [

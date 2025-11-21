@@ -1,8 +1,4 @@
-import { useState } from "react";
-import ScrollToTop from "../components/ScrollToTop";
-import SkillTag from "../components/SkillTag";
 import Projects from "../components/Projects";
-import ProjectPage from "./ProjectPage";
 import Experience from "./Experience";
 import SkillPage from "./SkillPage";
 

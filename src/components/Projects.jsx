@@ -23,7 +23,7 @@ export default function Projects({year, title, text, role, tag, link, src}){
     return (
         <div onClick={()=>setDetailPop(true)} className="box-border border rounded-lg p-3 gap-3 min-w-0 max-w-[420px] hover:border-blue-600">
             <div className="relative group">
-                <span className="absolute left-2/3 transform  translate-y-1/2 bottom-full mb-2 hidden group-hover:block px-2 py-1 bg-orange-600 text-gray-200 text-sm rounded whitespace-nowrap">
+                <span className="absolute left-2/3 transform translate-y-1/2 bottom-full mb-2 hidden group-hover:block px-2 py-1 bg-orange-600 text-gray-200 text-sm rounded whitespace-nowrap">
                 클릭하여 상세 내용 보기
                 </span>
             <div className="text-sm">
