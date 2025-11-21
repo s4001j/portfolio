@@ -20,7 +20,7 @@ export default function ProjectPage(){
     const tagItems1 = ProjectList[0].tag.split(",").map(item=>item.trim());
 
     return(
-        <div className="box-border p-5 overflow-x-auto mx-1">
+        <div className="box-border p-5 overflow-x-auto break-words mx-1">
         <div className="text-4xl mb-15">
             <div className="mb-5">Project</div>
             <Projects year="2025.09.26.~2025.10.22." title="TempBNB" text="숙박 예약 플랫폼" role="위시리스트 쿼리, 홈화면, 검색창, 검색결과, 위시리스트, 레이아웃 헤더/푸터" tag="React, TailwindCSS4, Spring Boot, MySQL" link="https://github.com/s4001j/tempBNB" src="https://temp-bnb-seven.vercel.app/" />

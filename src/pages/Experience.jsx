@@ -58,7 +58,7 @@ export default function Experience(){
         <div className="p-5 min-h-screen" id="Experience">
             <div className="text-4xl mb-5">경력 및 자격증</div><br/>
             <div className="text-2xl">[경력 및 교육]</div>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto break-words">
             <table className="min-w-full table-auto border-collapse">
                 {/* 테이블 헤더 */}
                 <thead className="">
@@ -82,7 +82,7 @@ export default function Experience(){
             </table>
             </div><br/>
             <div className="text-2xl mt-10">[자격증]</div>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto break-words">
             <table className="min-w-full table-auto border-collapse">
                 {/* 테이블 헤더 */}
                 <thead className="">

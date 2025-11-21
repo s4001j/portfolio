@@ -6,7 +6,7 @@ const ProjDetail = ({ detailPop, onClose, children }) => {
 
   return (
     <div className="fixed inset-0 bg-transparent flex justify-center items-center z-[1000]" onClick={onClose}>
-      <div className="bg-zinc-800 p-5 rounded-3xl shadow-lg absolute top-[105px] w-[350px] h-[450px]" onClick={(e) => e.stopPropagation()}>
+      <div className="bg-zinc-800 p-5 rounded-3xl shadow-lg absolute top-[105px] min-w-0 max-w-[350px] h-[450px] overflow-x-auto break-words" onClick={(e) => e.stopPropagation()}>
         <button onClick={onClose} className="flex ml-auto text-sm text-gray-300 hover:text-gray-500">닫기</button>
         {children}
       </div>
@@ -21,7 +21,7 @@ export default function Projects({year, title, text, role, tag, link, src}){
     const closePop = () => setDetailPop(false);
 
     return (
-        <div onClick={()=>setDetailPop(true)} className="box-border border rounded-lg p-3 gap-3 w-[420px] hover:border-blue-600">
+        <div onClick={()=>setDetailPop(true)} className="box-border border rounded-lg p-3 gap-3 min-w-0 max-w-[420px] hover:border-blue-600">
             <div className="relative group">
                 <span className="absolute left-2/3 transform  translate-y-1/2 bottom-full mb-2 hidden group-hover:block px-2 py-1 bg-orange-600 text-gray-200 text-sm rounded whitespace-nowrap">
                 클릭하여 상세 내용 보기

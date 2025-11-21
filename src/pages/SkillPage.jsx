@@ -43,7 +43,7 @@ export default function SkillPage(){
             ))}
             </ul>
             <div className="text-2xl mt-10">[Tools]</div>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto break-words">
             <table className="min-w-full table-auto border-collapse">
                 {/* 테이블 헤더 */}
                 <thead className="">
